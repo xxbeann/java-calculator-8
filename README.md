@@ -18,6 +18,6 @@
 2. 사용자 입력 정규화
 3. 덧셈 기능
 
-### Naming Convention
+### Code Convention
 
-https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
+https://google.github.io/styleguide/javaguide.html
