@@ -17,3 +17,7 @@
 1. 사용자 입력 기능
 2. 사용자 입력 예외처리
 3. 덧셈 기능
+
+### Naming Convention
+
+https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
