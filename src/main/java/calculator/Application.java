@@ -22,7 +22,7 @@ public class Application {
 
             // 커스텀 구분자와 숫자만 허용
             String escapedSeparator = Pattern.quote(customSeparator);
-            if(!numberParts.matches("[0-9" + escapedSeparator + "]+")) {
+            if(!numberParts.matches("[0-9" + escapedSeparator + "]*")) {
                 throw new IllegalArgumentException("허용되지 않은 문자가 포함되어 있습니다.");
             }
         } else {
