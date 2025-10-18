@@ -6,10 +6,15 @@ public class Application {
     public static void main(String[] args) {
         System.out.println("덧셈할 문자열을 입력해 주세요.");
         String input = readLine();
-        int result = add(normalizeInput(input));
-        System.out.println("결과 : " + result);
+        String customSeparator = getCustomSeparator(input);
+        System.out.println(customSeparator);
+        //int result = add(normalizeInput(input));
+        //System.out.println("결과 : " + result);
     }
     private static int[] normalizeInput(String input) {
+        if(input.startsWith("//")) {
+            String customSeparator = getCustomSeparator(input);
+        }
         String[] tokens = input.split("[,:]");
         int[] normalized = new int[tokens.length];
         for (int i = 0; i < tokens.length; i++) {
@@ -19,6 +24,14 @@ public class Application {
             normalized[i] = Integer.parseInt(tokens[i]);
         }
         return normalized;
+    }
+
+    private static String getCustomSeparator(String input) {
+        String customSeparator = "";
+        if(input.startsWith("//")) {
+            customSeparator = input.substring(2).split("\\\\n")[0];
+        }
+        return customSeparator;
     }
 
     private static int add(int[] input) {
